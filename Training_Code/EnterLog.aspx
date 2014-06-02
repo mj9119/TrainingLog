@@ -154,7 +154,6 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-
         <div class="clear hideSkiplink">
             <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                 <Items>
@@ -162,6 +161,7 @@
                     <asp:MenuItem NavigateUrl="~/Training_Code/TrainingReport.aspx" Text="Training Report"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/EnterLog.aspx" Text="Training Updates"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/UpdateWorkoutType.aspx" Text="Add New Workout Type"/>
+                    <asp:MenuItem NavigateUrl="https://github.com/mj9119/TrainingLog" target="_blank" Text="Source Code on GitHub"/>
                 </Items>
             </asp:Menu>
         </div>
@@ -271,6 +271,10 @@
                         ControlToValidate="txtTotalMilesRun" 
                         ErrorMessage="Total Miles must be a number GE 0" ForeColor="#CC3300" 
                         Operator="GreaterThanEqual" Type="Double" ValueToCompare="0"></asp:CompareValidator>
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ControlToValidate="txtTotalMilesRun" 
+                        ErrorMessage="Total Miles Run cannot be blank" ForeColor="#CC3300"></asp:RequiredFieldValidator>
                 </td>
                 <td class="style51">
                     </td>
@@ -303,6 +307,10 @@
                         ControlToValidate="txtQualityMilesRun" 
                         ErrorMessage="Quality Miles must be a number GE 0" ForeColor="#CC3300" 
                         Operator="GreaterThanEqual" Type="Double" ValueToCompare="0"></asp:CompareValidator>
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                        ControlToValidate="txtQualityMilesRun" 
+                        ErrorMessage="Quality Miles Run cannot be blank" ForeColor="#CC3300"></asp:RequiredFieldValidator>
                 </td>
                 <td class="style33">
                     </td>

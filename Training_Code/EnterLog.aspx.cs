@@ -108,7 +108,8 @@ public partial class EnterLog : System.Web.UI.Page
     }
     protected void btnClear_Click(object sender, EventArgs e)
     {
-        ddlWorkoutTypes.SelectedIndex = -1;
+        //when user clears screen default to a Rest day
+        ddlWorkoutTypes.SelectedValue = "Rest";
         txtTotalMilesRun.Text = "0";
         txtQualityMilesRun.Text = "0";
         ddlHrsBike.SelectedIndex = -1;

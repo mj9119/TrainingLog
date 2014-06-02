@@ -23,6 +23,7 @@
                     <asp:MenuItem NavigateUrl="~/Training_Code/TrainingReport.aspx" Text="Training Report"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/EnterLog.aspx" Text="Training Updates"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/UpdateWorkoutType.aspx" Text="Add New Workout Type"/>
+                    <asp:MenuItem NavigateUrl="https://github.com/mj9119/TrainingLog" target="_blank" Text="Source Code on GitHub"/>
                 </Items>
             </asp:Menu>
         </div>

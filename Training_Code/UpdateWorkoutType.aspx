@@ -22,8 +22,7 @@
     <form id="form1" runat="server">
     <div>--%>
 
-        <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-
+    <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
         <div class="clear hideSkiplink">
             <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                 <Items>
@@ -31,10 +30,11 @@
                     <asp:MenuItem NavigateUrl="~/Training_Code/TrainingReport.aspx" Text="Training Report"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/EnterLog.aspx" Text="Training Updates"/>
                     <asp:MenuItem NavigateUrl="~/Training_Code/UpdateWorkoutType.aspx" Text="Add New Workout Type"/>
+                    <asp:MenuItem NavigateUrl="https://github.com/mj9119/TrainingLog" target="_blank" Text="Source Code on GitHub"/>
                 </Items>
             </asp:Menu>
         </div>
-</asp:Content>
+    </asp:Content>
 
 
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

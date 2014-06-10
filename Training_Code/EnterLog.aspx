@@ -17,7 +17,7 @@
         }
         .style4
         {
-            font-size: xx-large;
+            font-size: x-large;
             text-align: center;
         }
         .style5
@@ -167,13 +167,19 @@
         </div>
 </asp:Content>
 
-    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <p style="margin:0;text-align: center;font-size: x-large;">
+         Enter Daily Training Information
+<%--        <span id="hideshowdiv" style="text-align: center;font-size: small;" >hover mouse here for page explanation</span>--%>
+    </p>
+
         <table class="style1">
-            <tr>
+<%--            <tr>
                 <td class="style4" colspan="3">
                     Enter Daily Training Information</td>
                 <asp:Label ID="lblLoggedInUser" runat="server" Text="Label" Visible="False"></asp:Label>
-            </tr>
+            </tr>--%>
             <tr>
                 <td class="style4" colspan="3">
                     <asp:Label ID="lblTrainingInfoUpdate" runat="server" ForeColor="#0066CC" 
@@ -511,5 +517,5 @@
             </UpdateParameters>
 
         </asp:SqlDataSource>
-    
+    <asp:Label ID="lblLoggedInUser" runat="server" Text="Label" Visible="False"></asp:Label>
 </asp:Content>

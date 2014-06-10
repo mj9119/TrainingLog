@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript">
+    </script>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
 <%--    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>--%>
@@ -14,6 +16,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
+<%--    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <Scripts>
+        <asp:ScriptReference Path="http://code.jquery.com/jquery-1.4.2.min.js" />
+        </Scripts>
+    </asp:ScriptManager>--%>
+
 <div class="page">
         <div class="header">
             <div class="title">

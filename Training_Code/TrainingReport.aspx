@@ -5,7 +5,7 @@
         .style1
         {
             width: 100%;
-            border: 1px solid #008000;
+            border: 1px solid #4b6c9e;
         }
         .style4
         {
@@ -31,9 +31,46 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <h1 style="text-align:center">Training Report</h1>
-        <h3 style="text-align:center"> <asp:Label ID="lblPageMessage" runat="server" 
-            Visible="False"></asp:Label>  </h3>    
+    <p style="margin:0;text-align: center;font-size: x-large;">
+         Training Report
+        <span id="hideshowdiv" style="text-align: center;font-size: small;" >hover mouse here for page explanation</span>
+    </p>
+
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            $("#hideshowdiv").mouseenter(function () {
+                $("div.mydiv").show(true, true);
+                $("div.mydiv").animate({ right: '250px', opacity: '1.00' }, 1000);
+                $("div.mydiv").animate({ fontSize: '1.02em', fontWeight: 'bold' }, 1000);
+            });
+
+            $("#hideshowdiv").mouseleave(function () {
+                $("div.mydiv").hide(true, true);
+            });
+        });   
+    </script>
+    
+    <div class="mydiv" style="background:#98bf21;height:550px;width:430px;position:absolute;display:none;">
+       </br><span style="font-weight:bold;"> Page Explanation:</span>
+       </br>The Training Report details the most recent two weeks of daily training activity for the person who is logged in.
+       </br>To change the date range of the report, click a Calendar date button or buttons and choose a different date or dates. 
+       </br>End Date must be greater than or equal to Start Date.
+       </br>To Add or Change training information on this report, please choose "Training Updates" from the Menu.
+       </br><span style="font-weight:bold;"> Technical Summary:</span>
+       </br>Date field validation on this Page combines the use of the ASP.NET RequiredFieldValidator and CompareValidator controls.
+       </br>The Training Report is created using the DataList ASP.NET control bound to an SqlDataSource control.
+       </br>The SqlDataSource control utilizes a Connection String to access the database.
+       </br>The data is retrieved from the "TrainingLog" SQL Server table within a database named "Training".
+       </br>Report fields on this page are defined using Header and Item templates.
+       </br>Note: Other data access examples on this Site separate the SQL from the Presentation Layer using object data sources.
+       </br>
+       </br>Note: when the user hovers their mouse asking for a page explanation, Jquery animates this explanation over the screen without interrupting or re-rendering any current page content.
+       </br>The Jquery runtime Content Delivery Network (CDN) is coded within the Site.Master page.
+       </br>For additional technical detail, this site's code is viewable online.  Please see the "Source Code on GitHub" menu link.
+    </div>
+
+<%--        <h3 style="text-align:center"> <asp:Label ID="lblPageMessage" runat="server" 
+            Visible="False"></asp:Label>  </h3>  --%>  
 <p>Start Date:
     <asp:TextBox ID="txtStart" runat="server" CausesValidation="True"></asp:TextBox> 
     <asp:ImageButton ID="ibtnStart"
@@ -172,7 +209,7 @@
             </SelectParameters>
         </asp:SqlDataSource>
 
-    End of Report <br />
+     Report Footer <br />
     </p>
         <p style="text-align:center"> <asp:Label ID="lblLoggedInUser" runat="server" 
             Visible="False"></asp:Label>  </p>  

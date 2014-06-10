@@ -9,7 +9,7 @@
             <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
                 <Items>
                     <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home"/>                    
-                    <asp:MenuItem NavigateUrl="~/Training_Code/TrainingReport.aspx" Text="Training Log Application"/>
+                    <asp:MenuItem NavigateUrl="~/Training_Code/TrainingReport.aspx" Text="Triathlon Training Log"/>
                     <asp:MenuItem NavigateUrl="http://joeboman.com/Default.aspx" target="_blank" Text="Murray Casings Converted to ASP.Net"/>
  <%--                   <asp:MenuItem NavigateUrl="~/Training_Code/UpdateWorkoutType.aspx" Text="Timberlakes Power-Outages"/>--%>
                     <asp:MenuItem NavigateUrl="http://www.orioncalls.com" target="_blank" Text="Orion Game Calls"/>

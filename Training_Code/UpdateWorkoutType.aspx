@@ -9,7 +9,7 @@
     <style type="text/css">
         .style1
         {
-            font-size: xx-large;
+            font-size: x-large;
         }
         .style2
         {
@@ -38,9 +38,15 @@
 
 
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="style2">
+
+    <p style="margin:0;text-align: center;font-size: x-large;">
+         Add New Workout Type
+<%--        <span id="hideshowdiv" style="text-align: center;font-size: small;" >hover mouse here for page explanation</span>--%>
+    </p>
+
+<%--        <div class="style2">
             <span class="style1">Add New Workout Type</span>
-        </div>
+        </div>--%>
         <p align="center">
             <asp:Label ID="lblUpdateStatus" runat="server" Text=" " ForeColor="#0066CC">&nbsp;</asp:Label>
         </p>

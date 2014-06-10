@@ -26,7 +26,7 @@ public partial class TrainingReport : System.Web.UI.Page
             lblLoggedInUser.Text = Page.User.Identity.Name;
         }
         // Since the Image Button that launches this page has validation turned off (so the user is able to launch the calendar
-        // and resolve the unrelated issue of Start Date > End date) the page is validated.  The code below however 
+        // and resolve when Start Date > End date) the page is validated.  The code below however 
         // detects when the user has manually entered invalid Date into either the Start Date or End Date fields.
         // When invalid date is detected, An arbitrary valid date 11/11/1111 is entered in lieu of the program blowing up with bad data.
 
@@ -35,7 +35,6 @@ public partial class TrainingReport : System.Web.UI.Page
         if (!Page.IsValid)
         {
             DateTime td;
-            int p;
             if
             (
             (DateTime.TryParseExact(txtStart.Text, "MM/dd/yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out td)
@@ -46,7 +45,7 @@ public partial class TrainingReport : System.Web.UI.Page
             ||
             (DateTime.TryParseExact(txtStart.Text, "M/d/yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out td)
             )))))   
-                p = 1;
+                ; // valid, proceed!
             else
                 txtStart.Text = "11/11/1111";
 
@@ -59,8 +58,8 @@ public partial class TrainingReport : System.Web.UI.Page
             (DateTime.TryParseExact(txtEnd.Text, "MM/d/yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out td)
             ||
             (DateTime.TryParseExact(txtEnd.Text, "M/d/yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out td)
-            )))))       
-                p = 2;
+            )))))
+                ; // valid, proceed!
             else
                 txtEnd.Text = "11/11/1111";
         }       

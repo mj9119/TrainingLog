@@ -1,0 +1,127 @@
+﻿IF DB_ID('Training') IS NOT NULL
+	DROP DATABASE Training
+	
+CREATE DATABASE Training
+GO
+
+USE [Training]
+GO
+
+/****** Object:  Table [dbo].[Workouttype]    Script Date: 04/01/2014 17:45:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[WorkoutType](
+	[UserEmail] [varchar](25) NOT NULL,
+	[TypeOfWorkout] [varchar](50) NOT NULL,	
+ CONSTRAINT [PK_WorkoutType] PRIMARY KEY CLUSTERED 
+(
+	[UserEmail] ASC,
+	[TypeOfWorkout] ASC	
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'generic@email.com', N'Run')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Run Cycle')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Run Bike')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Bike')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Run')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Strength Train')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Run / Strength Train')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Hills')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Rest')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Long Run')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Tempo Run')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'jcb9119@gmail.com', N'Run Intervals')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'generic@email.com', N'Long Run')
+INSERT [dbo].[WorkoutType] ([UserEmail], [TypeOfWorkout]) VALUES (N'generic@email.com', N'Rest')
+
+
+/****** Object:  Table [dbo].[TrainingLog]    Script Date: 01/11/2011 17:06:16 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[TrainingLog](
+
+	[UserEmail] [varchar](25) NOT NULL,	
+	[CalendarDate] [date] NOT NULL,		
+	[TypeOfWorkout] [varchar](50) NOT NULL,
+	[TotalMilesRun] [decimal](3,2) NOT NULL,
+	[QualityMilesRun] [decimal](3,2) NOT NULL,
+	[TotalMinsBike] [smallint] NOT NULL,	
+	[TotalMinsSwim] [smallint] NOT NULL,	
+	[WorkoutDescription] [varchar](1500) NOT NULL,	
+
+ CONSTRAINT [PK_TrainingLog] PRIMARY KEY CLUSTERED 
+(
+	[UserEmail] ASC,
+	[CalendarDate] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/* SET IDENTITY_INSERT [dbo].[Invoices] ON */
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'generic@email.com', '2014-04-15', N'Run',6.25, 3.00, 100,50, N'3x1600m @ 10k effort 1:30 recoveries plus warmup/warmdown')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-03-27', N'Run',7.25, 1.00, 100,50, N'Long Run Hard Finish at 5k effort')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2012-03-27', N'Run',3.25, 0.00, 100,50, N'Swam first followed by easy run')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'generic@email.com', '2014-04-10', N'Run',6.25, 3.25, 100,50, N'Full Workout Description appears in this area')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-02', N'Run',7.25, 3.25, 100,50, N'Sample Workout Description')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-06', N'Long Run',5.8, 0.0, 0, 0, N'56 minute easy Long Run in neighborhood')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-08', N'Run',3.6, 0.0, 127, 62, N'easy run in neighborhood')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-09', N'Run',3.5, 1.5, 127, 62, N'Test todays workout')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-19', N'Strength Train',0, 0, 0, 0, N'An hour or so strength training at Great Life in Salina, KS')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-03-30', N'Run',1.25, .25, 100,50, N'Another Sample Workout Description')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-13', N'Tempo Run',5.0, 2.25, 100,50, N'20 mins at 8:41 pace plus warmup/warmdown')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-15', N'Run',4.0, 0.0, 0.0,50, N'Circuits  Strength training plus warmup/warmdown')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-16', N'Hills',4.0, 0.0, 0.0,50, N'Circuits  Strength training plus warmup/warmdown')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-20', N'Long Run',6.4, 0, 0,0, N'An 1:05 minute easy long run in neighborhood')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-28', N'Tempo Run',5.0, 3.0, 0,0, N'25:30 minute Tempo Run on basement treadmill 0% grade starting at 8:41 pace working down to 8:27 then last 800m at 8:20 pace')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-30', N'Rest',5.0, 3.0, 0,0, N'Anniversary')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-05-01', N'Run / Strength Train',5.0, 0.0, 0,0, N'slow Running on treadmill in basement with strength training between each')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-05-02', N'Bike',0.0, 0.0, 0,0, N'15 mi bike in bottoms')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-05-03', N'Rest',5.0, 3.0, 0,0, N'lots of yard work -- allergies acting up')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-21', N'Rest',0.0, 0, 0,0, N'')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-22', N'Rest',0.0, 0, 0,0, N'')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-23', N'Rest',0.0, 0, 0,0, N'')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-24', N'Run Intervals',4.00, 1.25, 0,0, N'1.5mi warmup 300m,400m,400m,400m,300m on treadmill started at 7:15 pace progressively faster down to 6:18 pace  1.5mi warmdown')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'jcb9119@gmail.com', '2014-04-25', N'Rest',0.0, 0, 0,0, N'')
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun], [QualityMilesRun], [TotalMinsBike], [TotalMinsSwim], [WorkoutDescription]) VALUES (N'generic@email.com', '2014-04-17', N'Long Run',7.00, 3.25, 100,50, N'An extra extra extra long long long super long Long Workout Description goes here')
+
+/*
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout], [TotalMilesRun]) VALUES (N'me@you.com', '2010-09-11', N'Run', 7.75) 
+*/
+
+/*
+INSERT [dbo].[TrainingLog] ([UserEmail], [CalendarDate], [TypeOfWorkout]) VALUES (N'Albert@masterxmlrad.com', CAST(0x00009E0300000000 AS DateTime), N'Run')
+*/
+
+/*
+INSERT [dbo].[Invoices] ([UserEmail], [TypeOfWorkout], [Subtotal], [ShipMethod], [Shipping], [SalesTax], [Total], [CreditCardType], [CardNumber], [ExpirationMonth], [ExpirationYear]) VALUES (N'Albert@masterxmlrad.com', CAST(0x00009E0300000000 AS DateTime), N'Run', 4.2500, 9.0000, 133.2200, N'VISA', N'1111-2222-3333-4444', 7, 2015)
+*/
+
+select * from WorkoutType
+select * from TrainingLog
+
+/****** Object:  Table [dbo].[InvoiceData]    Script Date: 01/11/2011 17:06:16 ******/
+/* test comment 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[InvoiceData](
+	[SalesTax] [money] NOT NULL
+) ON [PRIMARY]
+GO
+INSERT [dbo].[InvoiceData] ([SalesTax]) VALUES (0.0750)
+*/
+/****** Object:  Table [dbo].[Customers]    Script Date: 01/11/2011 17:06:16 ******/
+

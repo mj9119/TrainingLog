@@ -30,14 +30,19 @@ public partial class UpdateeWorkoutType : System.Web.UI.Page
     {
         if (Page.IsValid)
         {
-            myWorkoutType = new WorkoutType();
-            myWorkoutType.UserEmail = Page.User.Identity.Name;
-            myWorkoutType.TypeOfWorkout = txtNewWorkoutType.Text;
-            if (WorkoutObjectDB.InsertWorkoutType(myWorkoutType)==1)
-                ; //all good
-            //SqlDataSource2.Insert();
-            //SqlDataSource1.Insert();
-            lblUpdateStatus.Text = "New Workout Type \"" + txtNewWorkoutType.Text + "\" has been successfully added";
+            if (txtNewWorkoutType.Text == "") //if WorkoutType was not entered, throw an error message
+                lblUpdateStatus.Text = "Please enter a value for New Workout Type ";
+            else
+            {
+                myWorkoutType = new WorkoutType();
+                myWorkoutType.UserEmail = Page.User.Identity.Name;
+                myWorkoutType.TypeOfWorkout = txtNewWorkoutType.Text;
+                if (WorkoutObjectDB.InsertWorkoutType(myWorkoutType) == 1)
+                    ; //all good
+                //SqlDataSource2.Insert();
+                //SqlDataSource1.Insert();
+                lblUpdateStatus.Text = "New Workout Type \"" + txtNewWorkoutType.Text + "\" has been successfully added";
+            }
         }
     }
     protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)

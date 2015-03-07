@@ -4,7 +4,7 @@
 body   
 {
     background: #b6b7bc;
-    font-size: .80em;
+    font-size: .84em;
     font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -82,6 +82,13 @@ first child of the left and right table columns */
     margin-top: 0px;
 }
 
+/*
+#pcontentplaceholder1
+{
+    margin:0;
+    text-align: center;
+    font-size: x-large;    
+}*/
 
 /* PRIMARY LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
@@ -138,8 +145,20 @@ first child of the left and right table columns */
     line-height: normal;
 }
 
+#menu1
+{
+    font-size: 20px;
+    line-height: 2.35em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    
+}
 
-/* TAB MENU   
+.sightname
+{
+    font-weight: bold;
+}
+
+/* TAB MENU 
 ----------------------------------------------------------*/
 
 div.hideSkiplink

@@ -23,12 +23,11 @@
     </asp:ScriptManager>--%>
 
 <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
+        <div class="header" >
+            <div class="title" >
+                <h1 style="margin:0cm 3cm 0cm 3cm">
                     ASP.NET and Web Portfolio for Joe Boman
-                    <%--Daily Training Log Application--%>
-                </h1>
+                </h1> <br />
             </div>
             <div class="loginDisplay">
                 <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
@@ -45,23 +44,12 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
 
-<%--            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/TrainingReport.aspx" Text="Training Report"/>
-                        <asp:MenuItem NavigateUrl="~/EnterLog.aspx" Text="Training Updates"/>
-                        <asp:MenuItem NavigateUrl="~/UpdateWorkoutType.aspx" Text="Add New Workout Type"/>
-                    </Items>
-                </asp:Menu>
-            </div>--%>
         </div>
         <div class="main">
 
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
         </asp:ContentPlaceHolder>
-
-            <%--<asp:ContentPlaceHolder ID="MainContent" runat="server"/>--%>
+            
         </div>
         <div class="clear">
         </div>

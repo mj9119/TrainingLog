@@ -18,7 +18,7 @@
         <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" 
             ForeColor="White" />
     </asp:Login>
-    <asp:Label ID="lblTemp" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="lblTemp" runat="server" Text=""></asp:Label>
 </asp:Content>
 
 

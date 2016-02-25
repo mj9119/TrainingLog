@@ -46,7 +46,7 @@ public partial class EnterLog : System.Web.UI.Page
     {
         clnDate.Visible = true;
         ibtnCalendar.Visible = false;  
-    }
+    }   
     protected void Button1_Click(object sender, EventArgs e)
     {
         if (Page.IsValid)

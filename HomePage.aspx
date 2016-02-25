@@ -15,6 +15,7 @@
                 <asp:MenuItem NavigateUrl="http://www.orioncalls.com" target="_blank" Text="3. Orion Game Calls"/>
                 <asp:MenuItem NavigateUrl="http://joeboman.com/Default.aspx" target="_blank" Text="4. Murray Casings"/>
                 <asp:MenuItem NavigateUrl="http://www.ixtapaofshawnee.com/" target="_blank" Text="5. Ixtapa Restaurant"/>
+                <asp:MenuItem NavigateUrl="http://joeboman.com/FiveKPace.htm" target="_blank" Text="6. 5K Pace JS Calculator"/>
                 <%--<asp:MenuItem NavigateUrl="#" Text="&nbsp"/>--%>
             </Items>
         </asp:Menu>
@@ -24,17 +25,19 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p style="margin:0;text-align: center;font-size: x-large;">
-         Welcome to the Home page
+         Welcome to the Home page <br />
+         ASP.NET source code links for first two items below
     </p>
 
     <div id="menu1">
         <asp:Menu  runat="server"   EnableViewState="false" IncludeStyleBlock="false" Orientation="Vertical" RenderingMode="List" Font-Size="X-Large">
             <Items>                                 
-                <asp:MenuItem NavigateUrl="https://github.com/mj9119/TrainingLog" target="_blank" Text="1. Triathlon Training Log source on GitHub - C# ASP.NET Webforms framework application.  Includes the following technologies: HTML, CSS, SQL, jQuery, MSSQL Server database created using T-SQL script  "/>
-                <asp:MenuItem NavigateUrl="https://github.com/mj9119/Pettigoats" target="_blank" Text="2. Pettigoat Acres Farm source on GitHub - C# ASP.NET MVC4 MSSQL"/>
-                <asp:MenuItem NavigateUrl="http://www.orioncalls.com" target="_blank" Text="3. Orion Game Calls Source source code available upon request - Dynamic PHP ecommerce website writes dynamic HTML & Javascript depending on user option selected.  Site provides Content Management including MySQL, TinyMCE, CSS etc"/>
-                <asp:MenuItem NavigateUrl="http://joeboman.com/Default.aspx" target="_blank" Text="4. Murray Casings - Current static site Converted to ASP.Net for deployment November 15, 2015"/>                
-                <asp:MenuItem NavigateUrl="http://www.ixtapaofshawnee.com/" target="_blank" Text="5. Ixtapa Restaurant - Static PHP restaurant site"/>
+                <asp:MenuItem NavigateUrl="https://github.com/mj9119/TrainingLog" target="_blank" Text="1. Triathlon Training Log source code link to GitHub - C# ASP.NET Webforms framework application.  Includes the following technologies: HTML, CSS, SQL, ADO.NET, jQuery, MSSQL Server database created using T-SQL script  "/>
+                <asp:MenuItem NavigateUrl="https://github.com/mj9119/Pettigoats" target="_blank" Text="2. Pettigoat Acres Farm source code link to GitHub - C# ASP.NET MVC4 dynamic application.  Includes MSSQL, Entity Frameworks, HTML helpers, Razor Markup Language, Content Mgmt interface"/>
+                <asp:MenuItem NavigateUrl="http://www.orioncalls.com" target="_blank" Text="3. Orion Game Calls source code is available upon request - Recently redesigned ecommerce Paypal website.  Writes dynamic HTML & Javascript using PHP based upon user selection.  Stores/Updates/Retrieves site content from MySQL database and the Linux file system.  Provides Content Management to user via PHP/TinyMCE interface"/>
+                <asp:MenuItem NavigateUrl="http://joeboman.com/Default.aspx" target="_blank" Text="4. Murray Casings - Converting current static site to ASP.Net Webforms with Content Management solution.  Currently defining site requirements with business owner.  Targeted deployment: November 15, 2016"/> 
+                <asp:MenuItem NavigateUrl="http://www.ixtapaofshawnee.com/" target="_blank" Text="5. Ixtapa Restaurant - Static PHP restaurant site - Restaurant out of business 2016"/>
+                <asp:MenuItem NavigateUrl="http://joeboman.com/FiveKPace.htm" target="_blank" Text="6. JavaScript 5k Pace calculator"/>
             </Items>
         </asp:Menu>
     </div>

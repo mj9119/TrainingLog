@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> FiveK Pace </title>
+    <link href="Styles/Pace.css" rel="stylesheet" type="text/css" />    
+    <script type="text/javascript" src="Scripts/FiveKPace.js"></script>
+</head>
+<body >
+
+
+	<div style="position:absolute;float:center;left: 250px;">
+
+	<div id="content" >
+		<h2>Find average 5K pace per mile based upon your known race splits</h2>
+		<h3>This calculator is useful for calculating pace per mile including the last 1.1 of a 5k.  Enter your Finishing Time (mandatory).  Include also clock times for any mile splits you may remember.  It calculates the remaining paces per mile when you click submit.   </h3>
+		    
+				<h4>Choose Race: 5k or 10k:</h4>
+
+        <label for="race_distance">Choose Race: 5k/10k::::</label>
+		<select name="race_distance" id="race_distance" >
+			<optgroup label="">
+				<option value="5K">5K only</option>
+				<option value="10K">10K not yet functional</option>
+			</optgroup>
+		</select>   		
+		
+		<br /><br />Enter Mins. and Secs. for Finishing time: 
+		<br /> Mins.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secs.<br />
+		
+		<input type="text" name="mileOneSplit" id="mileOneMins"  size="5"  value="7:30" />		
+		<input type="text" name="mileOneSplit" id="mileOneSecs"  size="5"  value="7:30" />
+		<label for="mileOneSplit" id="lblMileOne" >Mile1  &nbsp;&nbsp;&nbsp; Pace:&nbsp; 07:30</label>
+				
+
+		<br />
+		<input type="text" name="mileTwoSplit" id="mileTwoMins"  size="5"  value="15:45" />
+		<input type="text" name="mileTwoSplit" id="mileTwoSecs"  size="5"  value="15:45" />
+		<label for="mileTwoSplit" id="lblMileTwo" >Mile2 &nbsp;&nbsp;&nbsp; Pace:&nbsp; 08:15</label>
+		
+		
+		<br />
+		<input type="text" name="mileThreeSplit" id="mileThreeMins"  size="5"  value="" />
+		<input type="text" name="mileThreeSplit" id="mileThreeSecs"  size="5"  value="" />
+		<label for="mileThreeSplit" id="lblMileThree" >Mile3 &nbsp;&nbsp;&nbsp; Pace:&nbsp; 08:15</label>
+		<br />
+
+		<input type="text" name="finishTime" id="finishMins" size="5"  value="25:15" />		
+		<input type="text" name="finishTime" id="finishSecs" size="5"  value="25:15" />
+		<label for="finishTime" id="lblFinish" >&nbsp;&nbsp;Actual Finish:&nbsp; 25:15</label>				
+
+		<label>&nbsp;</label><br /><br />
+		<input type="button" id="start" value="Calculates paces based on known splits" /><br />
+		<label>&nbsp;</label>
+
+		<label>&nbsp;</label><br /><br />
+		<input type="button" id="clrScreen" value="ClearScrn" /><br />
+		<label>&nbsp;</label>
+		
+		<!--
+		<br />
+		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
+		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile4:&nbsp; 08:15</label>		
+		<br />
+		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
+		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile5:&nbsp; 08:15</label>
+		<br />		
+		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
+		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile6:&nbsp; 08:15</label>
+		<br />
+		-->
+
+
+		<!--    		
+		<h4>Convert TO base:</h4>
+		<label for="to_base_num">:::</label>
+		<select name="to_base_num" id="to_base_num"
+			<optgroup label="">
+				<option value="2">Base 2</option>
+				<option value="10">Base 10</option>
+			</optgroup>
+		</select><br />
+		
+		  <br />
+		  <h4>The following year (click below for year prompt) </h4>
+		  
+		  
+		  <label>&nbsp;</label><br /><br />
+		  <input type="button" id="start" value="Calculate running paces based on known splits" /><br />
+		  <label>&nbsp;</label>
+		  -->
+		  <!-- <input type="button" id="clearScreen" value="Reset Paragraph" /> -->
+		  <!-- <p id="parId1" >This is any old paragraph text.  Feel free to clear this screen using <span class="italicise_word"> the </span> Clear button above. </p> -->
+	      
+		  <!-- basic html comment   
+		  <p id="parId1" >This is any old paragraph text.  Feel free to clear this screen using  the Clear button above. </p>
+		  -->
+		  
+		  
+	   </div>
+	</div>	
+
+</body>
+</html>

@@ -13,7 +13,7 @@ public partial class Login : System.Web.UI.Page
         Page.Form.DefaultFocus = Login1.FindControl("Username").ClientID;
 
     
-// The Code below actually exists in Prod as a security certificate on the Godaddy site is invoked at Login
+// The Code below is uncommented (actually exists) in Prod as a security certificate exists on the Godaddy site for password protection
         // if secure connection, set initial cursor position in the User Name field 
         // if not secure connection, then Redirect to secure connection
 /*

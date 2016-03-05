@@ -2,104 +2,77 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <title>BootStrap </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title> FiveK Pace </title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>	
+    
     <link href="Styles/Pace.css" rel="stylesheet" type="text/css" />    
     <script type="text/javascript" src="Scripts/FiveKPace.js"></script>
 </head>
 <body >
 
+    <div class="container">
+        <h1>Calculate 5K pace per mile.  Or determine whether you speeded up or slowed down during your 5K race.</h1> 
 
-	<div style="position:absolute;float:center;left: 250px;">
+        <ul>
+            <li><h3>
+                <mark class="italicise_word"> To calculate overall 5k pace per mile: </mark>
+                Enter a number for Minutes and for Seconds where the screen reads in red: "Finishing time is mandatory".  
+                Then click the "Calculate average pace per mile" button.
+            </h3></li>
 
-	<div id="content" >
-		<h2>Find average 5K pace per mile based upon your known race splits</h2>
-		<h3>This calculator is useful for calculating pace per mile including the last 1.1 of a 5k.  Enter your Finishing Time (mandatory).  Include also clock times for any mile splits you may remember.  It calculates the remaining paces per mile when you click submit.   </h3>
-		    
-				<h4>Choose Race: 5k or 10k:</h4>
+            <li><h3>
+                <mark class="italicise_word">
+                To determine whether you speeded up or slowed down in your 5k, based upon known clock times:  
+                </mark>
+                Enter your finishing time in Minutes and Seconds as described in the first bullet point.  Then, enter clock times in Minutes & Seconds for known mile splits.  
+                For example, if you ran 24:30 for 5k, enter a finishing time of 24 and 30 as described in the first sentence of the first bullet point (above).
+                Then, let's say you remember only that your time at the two mile mark was 16:10.  
+                In that case, on the line where the screen reads: "Enter Mile 2 clock time if known", enter 16 in the Minutes column and 10 in the Seconds column.
+                Then, click the "Calculate average pace per mile" button to see that you speeded up to 7:31 pace on the last portion of the 3.1 mile race.
+            </h3></li>
+        
+        </ul>
 
-        <label for="race_distance">Choose Race: 5k/10k::::</label>
-		<select name="race_distance" id="race_distance" >
-			<optgroup label="">
-				<option value="5K">5K only</option>
-				<option value="10K">10K not yet functional</option>
-			</optgroup>
-		</select>   		
-		
-		<br /><br />Enter Mins. and Secs. for Finishing time: 
-		<br /> Mins.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secs.<br />
-		
-		<input type="text" name="mileOneSplit" id="mileOneMins"  size="5"  value="7:30" />		
-		<input type="text" name="mileOneSplit" id="mileOneSecs"  size="5"  value="7:30" />
-		<label for="mileOneSplit" id="lblMileOne" >Mile1  &nbsp;&nbsp;&nbsp; Pace:&nbsp; 07:30</label>
-				
+        <!--  <p>The form below shows input elements with different widths using different .col-xs-* classes:</p> -->
+        <form role="form">
+        <div class="form-group">
+          <div class="col-xs-1">
+            <label for="ex1">Minutes</label>
+            <input class="form-control" id="mileOneMins" type="text" /> 
+            <input class="form-control" id="mileTwoMins" type="text" /> 
+            <input class="form-control"  id="mileThreeMins" type="text" />
+		    <input class="form-control"  id="finishMins" type="text" />		
+          </div>
+          <div class="col-xs-1">
+            <label for="ex2">Seconds</label>
+            <input class="form-control" id="mileOneSecs" type="text" />
+            <input class="form-control" id="mileTwoSecs" type="text" />
+            <input class="form-control" id="mileThreeSecs" type="text" />
+		    <input class="form-control"  id="finishSecs" type="text" />		
+          </div>
+          <div class="col-xs-5">
+            <label for="ex3">Label/Message</label>
 
-		<br />
-		<input type="text" name="mileTwoSplit" id="mileTwoMins"  size="5"  value="15:45" />
-		<input type="text" name="mileTwoSplit" id="mileTwoSecs"  size="5"  value="15:45" />
-		<label for="mileTwoSplit" id="lblMileTwo" >Mile2 &nbsp;&nbsp;&nbsp; Pace:&nbsp; 08:15</label>
-		
-		
-		<br />
-		<input type="text" name="mileThreeSplit" id="mileThreeMins"  size="5"  value="" />
-		<input type="text" name="mileThreeSplit" id="mileThreeSecs"  size="5"  value="" />
-		<label for="mileThreeSplit" id="lblMileThree" >Mile3 &nbsp;&nbsp;&nbsp; Pace:&nbsp; 08:15</label>
-		<br />
+            <input class="form-control" id="lblMileOne" type="text" value ="xxEnter Clock time Mile One" readonly />
+            <input class="form-control" id="lblMileTwo" type="text" value ="xxEnter Clock time Mile Two" readonly />
+            <input class="form-control" id="lblMileThree" type="text" value ="xxEnter Clock time Mile Three" readonly />
+		    <input class="form-control" id="lblFinish" type="text" value ="xxEnter Clock time Finish" readonly />		
 
-		<input type="text" name="finishTime" id="finishMins" size="5"  value="25:15" />		
-		<input type="text" name="finishTime" id="finishSecs" size="5"  value="25:15" />
-		<label for="finishTime" id="lblFinish" >&nbsp;&nbsp;Actual Finish:&nbsp; 25:15</label>				
+            <label>&nbsp;</label><br /><br />
+            <button type="button" id="start" class="btn btn-primary">Calculate average pace per mile</button>
+            <label>&nbsp;</label>
 
-		<label>&nbsp;</label><br /><br />
-		<input type="button" id="start" value="Calculates paces based on known splits" /><br />
-		<label>&nbsp;</label>
+            <label>&nbsp;</label><br /><br />
+            <button type="button" id="clrScreen" class="btn btn-primary">Clear Mins. & Secs.</button>
+            <label>&nbsp;</label>		
+          </div>
+        </div>
+        </form>
 
-		<label>&nbsp;</label><br /><br />
-		<input type="button" id="clrScreen" value="ClearScrn" /><br />
-		<label>&nbsp;</label>
-		
-		<!--
-		<br />
-		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
-		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile4:&nbsp; 08:15</label>		
-		<br />
-		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
-		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile5:&nbsp; 08:15</label>
-		<br />		
-		<input type="text" name="quantity" id="quantity"  size="5"  value="15:45" />
-		<label for="miletwoSplit">&nbsp;&nbsp;&nbsp;Actual Mile6:&nbsp; 08:15</label>
-		<br />
-		-->
-
-
-		<!--    		
-		<h4>Convert TO base:</h4>
-		<label for="to_base_num">:::</label>
-		<select name="to_base_num" id="to_base_num"
-			<optgroup label="">
-				<option value="2">Base 2</option>
-				<option value="10">Base 10</option>
-			</optgroup>
-		</select><br />
-		
-		  <br />
-		  <h4>The following year (click below for year prompt) </h4>
-		  
-		  
-		  <label>&nbsp;</label><br /><br />
-		  <input type="button" id="start" value="Calculate running paces based on known splits" /><br />
-		  <label>&nbsp;</label>
-		  -->
-		  <!-- <input type="button" id="clearScreen" value="Reset Paragraph" /> -->
-		  <!-- <p id="parId1" >This is any old paragraph text.  Feel free to clear this screen using <span class="italicise_word"> the </span> Clear button above. </p> -->
-	      
-		  <!-- basic html comment   
-		  <p id="parId1" >This is any old paragraph text.  Feel free to clear this screen using  the Clear button above. </p>
-		  -->
-		  
-		  
-	   </div>
-	</div>	
+    </div>
 
 </body>
 </html>

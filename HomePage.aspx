@@ -36,8 +36,10 @@
                 <asp:MenuItem NavigateUrl="https://github.com/mj9119/Pettigoats" target="_blank" Text="2. Pettigoat Acres Farm source code link to GitHub - C# ASP.NET MVC4 dynamic application.  Includes MSSQL, Entity Frameworks, HTML helpers, Razor Markup Language, Content Mgmt interface"/>
                 <asp:MenuItem NavigateUrl="http://www.orioncalls.com" target="_blank" Text="3. Orion Game Calls source code is available upon request - Recently redesigned ecommerce Paypal website.  Writes dynamic HTML & Javascript using PHP based upon user selection.  Stores/Updates/Retrieves site content from MySQL database and the Linux file system.  Provides Content Management to user via PHP/TinyMCE interface"/>
                 <asp:MenuItem NavigateUrl="http://joeboman.com/Default.aspx" target="_blank" Text="4. Murray Casings - Converting current static site to ASP.Net Webforms with Content Management solution.  Currently defining site requirements with business owner.  Targeted deployment: November 15, 2016"/> 
-                <asp:MenuItem NavigateUrl="http://www.ixtapaofshawnee.com/" target="_blank" Text="5. Ixtapa Restaurant - Static PHP restaurant site - Restaurant out of business 2016"/>
-                <asp:MenuItem NavigateUrl="http://joeboman.com/FiveKPace.htm" target="_blank" Text="6. JavaScript 5k Pace calculator"/>
+                <asp:MenuItem NavigateUrl="http://www.ixtapaofshawnee.com/" target="_blank" Text="5. Ixtapa Restaurant - Static PHP restaurant site - Restaurant ceased operations 2016"/>
+
+                <asp:MenuItem NavigateUrl="http://joeboman.com/FiveKPace.htm" target="_blank" Text="6.<sup>New</sup> Client side 5k Pace Calculator.  Utilizes object-oriented JS & DOM Scripting within a Bootstrap CDN environment. " />
+            <%--<asp:MenuItem NavigateUrl="http://joeboman.com/FiveKPace.htm" target="_blank" Text="6. Client side 5k Pace Calculator.  Utilizes object-oriented JS & DOM Scripting within a Bootstrap CDN environment."/>--%>
             </Items>
         </asp:Menu>
     </div>

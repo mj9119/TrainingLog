@@ -259,6 +259,15 @@ div.accountInfo
 /* MISC  
 ----------------------------------------------------------*/
 
+
+
+/* picks up specific superscript <sup> child item underneath a specific URL for children item of li tag within ul  */
+ul.level1>li>a[href="http://joeboman.com/FiveKPace.htm"]>sup
+{
+    vertical-align:top;
+    color:Red;
+}
+
 .clear
 {
     clear: both;
